@@ -1,12 +1,19 @@
+"use client";
+import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center">
-      <div className="text-center px-6">
+    <main className="min-h-screen text-white flex items-center justify-center bg-gradient-to-br from-black via-emerald-950 to-purple-950">
+      <motion.div
+  className="text-center px-6"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.2 }}
+>
         <p className="mb-4 text-emerald-400 tracking-[0.3em] text-sm uppercase">
           Arcane Academy of Artificial Intelligence
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6">
+        <h1 className="font-[family-name:var(--font-cinzel)] text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-[0_0_35px_rgba(16,185,129,1)]">
           Adrija Chakraborty
         </h1>
 
@@ -22,7 +29,7 @@ export default function Home() {
         <button className="rounded-full border border-emerald-500 px-8 py-3 text-emerald-300 transition-all duration-300 hover:bg-emerald-500 hover:text-black">
           Begin The Journey
         </button>
-      </div>
+      </motion.div>
     </main>
   );
 }
